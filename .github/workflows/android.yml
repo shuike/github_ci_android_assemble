@@ -26,6 +26,8 @@ jobs:
       run: |
         ./gradlew build
         cp app/build/outputs/apk/debug/app-debug.apk app.apk
+        git config --global user.name "CI"
+        git config --global user.email "shuike007@126.com"
         git add app.apk
         git commit -m "apk build"
         git push
