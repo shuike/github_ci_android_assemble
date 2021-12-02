@@ -26,3 +26,6 @@ jobs:
       run: |
         ./gradlew build
         cp app/build/outputs/apk/debug/app-debug.apk app.apk
+        git add app.apk
+        git commit -m "apk build"
+        git push
